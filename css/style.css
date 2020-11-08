@@ -1,0 +1,68 @@
+/*Recetando estilos da pagina*/
+body,
+h1,
+h2,
+ul,
+li,
+p,
+dd,
+dl,
+dt {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%; /*Faz com que a imagem fique automaticamente responsiva*/
+}
+
+ul {
+  list-style: none;
+}
+
+/*Iniciando estilização*/
+body {
+  background: #faf6ed;
+  color: #222;
+  -webkit-font-smoothing: antialiased; /* Por padrão o navegador deixa a font suave, e vamso remover isso*/
+
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+}
+
+.menu {
+  grid-column: 3/5;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: #fb5;
+}
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px; /*Aumentar a área de click do botão*/
+  margin-right: 10px;
+  color: #222;
+  text-decoration: none;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+  text-transform: uppercase; /*Tudo em maísculo*/
+  font-size: 0.875rem;
+  letter-spacing: 0.1em; /*Espaçamento entre cada letra*/
+}
+
+.grid-section {
+  grid-column: 3 /4;
+  width: 100%;
+  box-sizing: border-box; /*Serve para acumular a largura o valor do padding*/
+  padding: 10px;
+  grid-template-columns: 90px 300px 1fr;
+  grid-gap: 20px;
+  margin-bottom: 4rem;
+}
